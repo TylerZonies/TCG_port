@@ -9,7 +9,7 @@
     "start:dev": "concurrently \"nodemon --ignore 'views/*'\" \"npm run client\"",
     "client": "cd views && npm run start",
     "seed": "node scripts/seedDB.js",
-    "install": "cd views && yarn install",
+    "install": "cd views && npm install",
     "build": "cd views && npm run build",
     "heroku-postbuild": "npm run build"
 
