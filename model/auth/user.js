@@ -3,7 +3,7 @@ const collectionSchema = require('../collection');
 
 const userSchema = new mongoose.Schema({
     googleID: String,
-    collection: collectionSchema
+    cardCollection: collectionSchema
 
 })
 

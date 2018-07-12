@@ -9,7 +9,7 @@ module.exports = (app) => {
             res.json(data.collection);
         })
     })
-    app.post('/api/card/add').then((req, res) => {
+    app.post('/api/card/add', (req, res) => {
         const { body } = req
 
         db.User.findByIdAndUpdate({id: body.id}, {$push: {'collection.cards': body.card}}).then((e, data) => {

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const path = require('path');
 const app = express();
 const db = require('./config/connection.js');
 const bodyParser = require('body-parser')

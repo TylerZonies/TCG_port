@@ -1,4 +1,4 @@
 const keys = require('./keys');
 module.exports = {
-    db: keys.mLab
+    db: process.env.MONGODB_URI
   };
