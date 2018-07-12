@@ -14,6 +14,10 @@
     "heroku-postbuild": "npm run build"
 
   },
+  "engines": {
+    "node": "8.11.1",
+    "yarn": "1.7.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TylerZonies/TCG_port.git"
