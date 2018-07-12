@@ -5,10 +5,15 @@ const cardSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    quantity: {
+        type: Number,
+        default: 1
+    },
     set: {
         type: String,
         required: true
     },
+    foil: Boolean,
     location: String,
     price: Number
 })

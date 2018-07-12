@@ -17,10 +17,18 @@ class PriceChangeTable extends Component {
         // depending on props.isSpiked cards and set state with the array
         if(this.props.isSpiked){
             //get call to get the sorted list of collection cards
-            axios.get('')
+            axios.get('/api/collection').then(res => {
+                this.setState({
+                    cardList: res.data.cards
+                })
+            })
         } else {
             //get cell to get ordered list of wishlist cards
-            axios.get('')
+            axios.get('/api/collection').then(res => {
+                this.setState({
+                    cardList: res.data.cards
+                })
+            })
         }
     }
 

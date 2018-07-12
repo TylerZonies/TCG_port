@@ -10,6 +10,7 @@ class CardForm extends Component {
             cardSet: '',
             cardLocation: '',
             cardSetData: [],
+            cardSetCodeData:[],
             cardApiData: [],
             userStorageData: []
         }
@@ -42,6 +43,9 @@ class CardForm extends Component {
         axios.get(`https://api.magicthegathering.io/v1/cards?name=${event}`)
             .then(res => {
                 const newArr = res.data.cards.map(card => card.set)
+                this.setState({
+                    cardSetCodeData: newArr
+                })
                 this.makeSetsPretty(newArr, 0, [])
             
             })

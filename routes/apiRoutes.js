@@ -6,7 +6,7 @@ module.exports = (app) => {
         
         db.User.findOne({_id: query.id}).then((e, data) => {
             if(e) throw e;
-            res.json(data.collection);
+            res.json(data.cardCollection);
         })
     })
     app.post('/api/card/add', (req, res) => {
@@ -25,6 +25,13 @@ module.exports = (app) => {
                 })
             }
 
+        })
+    })
+    app.post('/secret/user', (req, res) => {
+        const { body } = req
+
+        db.User.create({body}).then((e, data) => {
+            res.json(data);
         })
     })
 }
