@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'views/build')));
+
 app.use(express.static(path.join(__dirname, 'views/build')));
 
 mongoose.connect(db.db).catch((reason) => {
@@ -17,6 +17,7 @@ mongoose.connect(db.db).catch((reason) => {
     console.log(connection.connectionOptions);
 });
 require('./routes/apiRoutes')(app);
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'views/build')));
 
 const port = process.env.PORT || 6969;
 
