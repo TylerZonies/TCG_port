@@ -1,0 +1,26 @@
+{
+  "name": "tcg_port",
+  "version": "1.0.0",
+  "description": "Trading card collection management system",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TylerZonies/TCG_port.git"
+  },
+  "author": "Slug",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TylerZonies/TCG_port/issues"
+  },
+  "homepage": "https://github.com/TylerZonies/TCG_port#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.2",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0"
+  }
+}
