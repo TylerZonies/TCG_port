@@ -34,4 +34,9 @@ module.exports = (app) => {
             res.json(data);
         })
     })
+    app.get('/secret/user', (req, res) => {
+        db.User.find().then((e, data) => {
+            res.json(data);
+        }
+    })
 }
